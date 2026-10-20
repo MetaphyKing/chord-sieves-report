@@ -29,16 +29,16 @@
 \maketitle
 
 \begin{abstract}
-Long-period temperate terrestrial exoplanets ($P > 60\text{ d}$, $0.75 \le R_p/R_\oplus \le 1.48$) remain systematically under-recovered in standard Box Least Squares (BLS) and Transit Least Squares (TLS) sweeps of Transiting Exoplanet Survey Satellite (TESS) light curves due to multi-year sector gaps, spacecraft momentum dumps, scattered-light ramps, and stellar granulation flicker. We present \textbf{CHORD-SIEVES v2.4} (\emph{Coherent Harmonic Orbital Resonance \& Detrended Sieve for Exoplanet Vetting and Ephemeris Self-Audit}), an autonomous 11-stage discovery and longitudinal verification pipeline paired with an 80-kernel \textbf{BAMA Astro-Prime Collective Cartridge} (\texttt{bama\_exoplanet\_collective\_arena.bin}, $20{,}480\text{ B} = 80 \times 256\text{ B}$ cache-line-aligned \texttt{QEG5} cells over the Golden Ratio algebraic ring $\mathbb{Z}[\varphi]$ with $\varphi^2 = \varphi + 1$, SHA-256 \texttt{c7237583ff...255ba5}, compiled in $1{,}241.63\text{ ms}$). Across $390$ indexed TIC host stars, CHORD-SIEVES v2.4 has cataloged \textbf{845 verified exoplanet candidates} partitioned into \textbf{809 Category~A} newly discovered uncataloged worlds, \textbf{25 Category~B} solved single-transit or fixed-period TESS Objects of Interest (TOIs), and \textbf{11 Category~C} sub-kilometer ephemeris refinements and harmonic controls ($809 + 25 + 11 = 845$). Of these, \textbf{600 worlds} reside within the \textbf{Shirt-Sleeve Human-Hospitable Surface Temperature Bullseye} ($0^\circ\text{C} \le T_{\text{surf}} \le +35^\circ\text{C}$ / $32^\circ\text{F}$ to $95^\circ\text{F}$), \textbf{651} lie within the broader human-survivable band, \textbf{339} satisfy Close-to-Perfect-Earth structural specifications, and \textbf{8 primary-catalog worlds} (plus $4$ outer-orbit multi-planet siblings, $12$ total in the $1{,}261$-object Marked Follow-Up Registry) achieve the 7-pillar \textbf{Perfect-Earth Bullseye} ($\ge 85.0\%$ score), led by \textbf{TIC~271478281.05} ($P = 125.51444\text{ d}$, $a = 0.4438\text{ AU}$, $R_p = 1.10\,R_\oplus$, $M_p = 1.39\,M_\oplus$, $g = 1.15\,g$, $T_{\text{eff}} = 4669\text{ K}$, $T_{\text{surf}} = +22.1^\circ\text{C} / +71.8^\circ\text{F}$, score $93.9\%$). In continuous forward-prediction auditing across \textbf{4,957 transit windows} in newly released TESS sectors (\textbf{Self-Audit Ledger v2.4.0}), CHORD-SIEVES achieved \textbf{2,170 \texttt{CORRECT}} blind transit recoveries, caught and dynamically recalibrated \textbf{422 \texttt{SHIFTED (TTV)}} transit-timing drift windows across $429$ worlds, recorded \textbf{0 \texttt{WRONG}} (zero disproven or retracted candidates; $100.0\%$ ephemeris precision across $843$ multi-sector worlds), with $2{,}326$ windows falling in spacecraft sector gaps (\texttt{UNABLE TO VERIFY}) and $39$ awaiting MAST release (\texttt{PENDING\_DATA\_RELEASE}). A read-only public verifier SDK is released alongside this manuscript.
+Long-period temperate exoplanets remain systematically under-recovered in standard Box Least Squares (BLS) and Transit Least Squares (TLS) sweeps of Transiting Exoplanet Survey Satellite (TESS) light curves due to multi-year sector gaps, spacecraft momentum dumps, scattered-light ramps, and stellar granulation flicker. We present \textbf{CHORD-SIEVES v2.4} (\emph{Coherent Harmonic Orbital Resonance \& Detrended Sieve for Exoplanet Vetting and Ephemeris Self-Audit}), an autonomous 11-stage discovery and longitudinal verification pipeline paired with an 80-kernel \textbf{BAMA Astro-Prime Collective Cartridge} (\texttt{bama\_exoplanet\_collective\_arena.bin}, $20{,}480\text{ B} = 80 \times 256\text{ B}$ cache-line-aligned \texttt{QEG5} cells over the Golden Ratio algebraic ring $\mathbb{Z}[\varphi]$ with $\varphi^2 = \varphi + 1$, SHA-256 \texttt{c7237583ff...255ba5}, compiled in $1{,}241.63\text{ ms}$). Across \textbf{386 unique TIC host stars} in the primary catalog ($390$ union TIC hosts when including four marked-only hosts: \texttt{71013298}, \texttt{118914286}, \texttt{253864764}, and \texttt{332064670}), CHORD-SIEVES v2.4 has cataloged \textbf{845 verified candidate records} ($0.88 \le R_p/R_\oplus \le 12.14$, including $64$ terrestrial-radius records in $0.75 \le R_p/R_\oplus \le 1.48$, of which $44$ have $P > 60\text{ d}$), partitioned into \textbf{809 Category~A} (\texttt{NEW\_OUTER}) uncataloged records, \textbf{25 Category~B} (\texttt{SOLVED\_TOI}) solved single-transit or fixed-period TOIs, and \textbf{11 Category~C} (\texttt{REFINEMENT\_HARMONIC}) ephemeris refinements and harmonic controls ($809 + 25 + 11 = 845$). By pipeline equilibrium-temperature cut ($T_{\text{surf}} = T_{\text{eq}}(A=0.25)\times(288/255) - 273.15$), \textbf{600 records} reside within the \textbf{Shirt-Sleeve Temperature Cut} ($0^\circ\text{C} \le T_{\text{surf}} \le +35^\circ\text{C}$ / $32^\circ\text{F}$ to $95^\circ\text{F}$; $65$ with $R_p \le 1.60\,R_\oplus$ and $535$ with $R_p > 1.60\,R_\oplus$), \textbf{651} lie within the extended survivable temperature band, \textbf{339} carry \texttt{CLOSE\_TO\_PERFECT\_EARTH\_SPEC} status, and \textbf{8 primary-catalog records} achieve $\ge 85.0\%$ on the pipeline's 7-pillar rubric (\textbf{6 records} satisfying law kernel \texttt{KX02}'s strict rocky ceiling $R_p \le 1.60\,R_\oplus, M_p \le 2.0\,M_\oplus$). Because adjacent candidate periods on the same host star lie within $0.084\text{--}1.772$ mutual Hill radii (inside Gladman's $2\sqrt{3} \approx 3.46\,R_H$ coplanar stability limit), these $8$ records represent \textbf{competing two-epoch period-alias solutions across 3 distinct host stars} (\texttt{TIC~271478281}, \texttt{TIC~283722336}, and \texttt{TIC~320847025}), led by the two-epoch flagship solution \textbf{TIC~271478281.05} ($M_\star = 0.74\,M_\odot$, $R_\star = 0.691\,R_\odot$, $T_{\text{eff}} = 4669\text{ K}$, $P = 125.51444\text{ d}$, $a = 0.44375\text{ AU} \approx 0.4438\text{ AU}$, $R_p = 1.10\,R_\oplus$, $M_p = 1.39\,M_\oplus$, $g = 1.15\,g_\oplus$, pipeline $T_{\text{surf}} = +22.1^\circ\text{C} / +71.8^\circ\text{F}$, score $93.9\%$). In longitudinal forward-prediction auditing across \textbf{4,957 scheduled transit windows} (\textbf{Self-Audit Ledger v2.4.0}), CHORD-SIEVES achieved \textbf{2,170 / 4,957 (43.78\%) on-time \texttt{CORRECT}} transit recoveries and \textbf{422 (8.51\%) \texttt{SHIFTED (TTV)}} drift recoveries across $429$ recalibrated records, with \textbf{0 \texttt{WRONG}} across the $2{,}592$ observationally covered windows ($100.0\%$ covered-window non-retraction rate across $843$ multi-sector records), $2{,}326$ windows in sector gaps (\texttt{UNABLE TO VERIFY}), and $39$ awaiting MAST release (\texttt{PENDING\_DATA\_RELEASE}).
 \end{abstract}
 
-\section{Introduction \& Motivation}
-Standard periodic transit searches such as BLS and TLS suffer from combinatorial false-positive blowup and severe sensitivity loss when planetary orbital periods exceed the $27.4$-day baseline of a single TESS sector. When a temperate rocky planet transits only once or twice per year across non-contiguous TESS Extended Mission sectors, global spline or Savitzky--Golay detrending frequently distorts or erases shallow ($150\text{--}600\text{ ppm}$) transit cores while inflating false alarms near data gaps and momentum dumps.
+\section{Introduction \& Scope}
+Standard periodic transit searches such as BLS and TLS suffer from sensitivity loss when orbital periods exceed the $27.4$-day baseline of a single TESS sector. When a planet transits only once or twice per year across non-contiguous TESS Extended Mission sectors, global spline detrending can distort shallow transit cores while inflating false alarms near data gaps and momentum dumps.
 
-To overcome these limitations without requiring petabyte-scale cloud clusters, CHORD-SIEVES v2.4 couples two foundational innovations protected under U.S.\ Patent Application No.\ 64/180,009:
+CHORD-SIEVES v2.4 addresses long-baseline TESS chord linkage by combining two components covered by U.S.\ Patent Application No.\ 64/180,009:
 \begin{enumerate}
-  \item \textbf{The 3-Zone Local Quadratic Flank-Bridge & 11-Stage Autonomous Sieve:} A strictly local, zero-gap-enforced parabolic baseline bridge that evaluates every candidate transit chord using robust Median Absolute Deviation (MAD) flank noise, left/right half-core symmetry, out-of-transit dipole rejection, dual-aperture ($\text{SAP}/\text{PDCSAP}$) flux agreement, background scattered-light vetoes, astrometric centroid stability, in-transit stellar granulation flicker invariance, and a 4-gate astrophysical false-positive eliminator (Stage~3.5).
-  \item \textbf{The 80-Kernel BAMA Astro-Prime Collective Cartridge (\texttt{QEG5}):} A $20{,}480$-byte memory-mapped constant arena encoding $53$ system infrastructure kernels, $19$ universal STEM physics/orbital-mechanics laws, and $8$ Perfect-Earth Bullseye reference kernels (\texttt{KX01}--\texttt{KX08}) into exact $256$-byte cache-line cells over the Golden Ratio ring $\mathbb{Z}[\varphi]$.
+  \item \textbf{The 3-Zone Local Quadratic Flank-Bridge \& 11-Stage Sieve:} A strictly local, zero-gap-enforced parabolic baseline bridge that evaluates candidate transit chords using robust Median Absolute Deviation (MAD) flank noise, left/right half-core symmetry, out-of-transit dipole rejection, dual-aperture ($\text{SAP}/\text{PDCSAP}$) flux agreement, background scattered-light vetoes, astrometric centroid stability, in-transit granulation flicker ratio, and a 4-gate Stage~3.5 false-positive eliminator.
+  \item \textbf{The 80-Kernel BAMA Astro-Prime Collective Cartridge (\texttt{QEG5}):} A $20{,}480$-byte memory-mapped constant arena encoding $53$ system infrastructure kernels (\texttt{K01}--\texttt{K53}), $19$ universal STEM physics/orbital-mechanics laws (\texttt{U01}--\texttt{U19}), and $8$ Perfect-Earth astrophysical law kernels (\texttt{KX01}--\texttt{KX08}, such as \texttt{KX01\_K\_DWARF\_GOLDILOCKS\_RADIATION} and \texttt{KX02}'s rocky-bulk ceiling $R_p \le 1.60\,R_\oplus, M_p \le 2.0\,M_\oplus$) into exact $256$-byte cache-line cells over the Golden Ratio ring $\mathbb{Z}[\varphi]$.
 \end{enumerate}
 
 \section{The 80-Kernel Astro-Prime $\mathbb{Z}[\varphi]$ Cartridge}
@@ -46,17 +46,17 @@ Each of the $K = 80$ kernels in \texttt{bama\_exoplanet\_collective\_arena.bin} 
 \begin{equation}
   \text{Size}(\mathcal{A}_{\text{astro}}) = 80 \times 256\text{ B} = 20{,}480\text{ B}.
 \end{equation}
-Rather than storing IEEE-754 floating-point weight matrices that drift across hardware architectures, each \texttt{QEG5} cell projects its latent operator onto the $12$ vertices $\mathbf{v}_i$ ($i \in \{0,\dots,11\}$) and $30$ edge midpoints $\mathbf{e}_j$ ($j \in \{0,\dots,29\}$) of a regular Golden Icosahedron/Dodecahedron inscribed in $\mathbb{R}^3$, quantized into the algebraic ring of Golden Integers:
+Each \texttt{QEG5} cell projects its operator onto the $12$ vertices $\mathbf{v}_i$ ($i \in \{0,\dots,11\}$) and $30$ edge midpoints $\mathbf{e}_j$ ($j \in \{0,\dots,29\}$) of a regular Golden Icosahedron/Dodecahedron inscribed in $\mathbb{R}^3$, quantized into the algebraic ring of Golden Integers:
 \begin{equation}
   \mathbb{Z}[\varphi] = \left\{ A + B\varphi \;\middle|\; A, B \in \mathbb{Z},\; \varphi = \frac{1+\sqrt{5}}{2},\; \varphi^2 = \varphi + 1 \right\}.
 \end{equation}
-Each 256-byte cell layout comprises:
+By the fundamental Golden identity $\varphi^2 = \varphi + 1$, multiplying any stored cell pair $(A, B) \in \texttt{int8}^2$ by $\varphi$ satisfies the exact cell-byte reduction $(A + B\varphi)\varphi = B + (A+B)\varphi = A\varphi + B\varphi^2$. Each 256-byte cell layout (\texttt{struct "<4sBBHQIeeeH"}) comprises:
 \begin{itemize}
-  \item \textbf{Bytes \texttt{0..25} ($26\text{ B}$ Header):} \texttt{magic="QEG5"} ($4\text{ B}$), \texttt{dtype\_code=10} ($1\text{ B}$), packed scale/degree byte $(s \ll 4) \mid d$ with DRGFC Chebyshev degree $0 \le d \le 6$ ($1\text{ B}$), \texttt{bit\_budget} $\le 4{,}096\text{ bits}$ ($2\text{ B}$), 64-bit FNV-1a topological hash ($8\text{ B}$), 32-bit CRC32 ($4\text{ B}$), FP16 radial bounds $(r_{\min}, r_{\text{scale}}, z_{\text{scale}})$ ($6\text{ B}$).
-  \item \textbf{Bytes \texttt{26..49} ($24\text{ B}$ Vertex Golden Shell):} Signed \texttt{int8} pairs $(A_{v,i}, B_{v,i})$ for all $12$ icosahedral vertices, reconstructing exact radial potentials $V_i = r_{\min} + z_{\text{scale}}(A_{v,i} + B_{v,i}\varphi)$.
-  \item \textbf{Bytes \texttt{50..109} ($60\text{ B}$ Edge Midpoint Golden Shell):} Signed \texttt{int8} pairs $(A_{e,j}, B_{e,j})$ across all $30$ icosahedral edges.
-  \item \textbf{Bytes \texttt{110..244} ($135\text{ B}$ Dodecahedral 720-State LUT):} $180$ packed 6-bit indices addressing the $720 = \lvert S_6 \rvert$ rotational/permutation states of the 3D Golden Dodecahedron ($48 + 720 = 768$ structural invariants).
-  \item \textbf{Bytes \texttt{245..255} ($11\text{ B}$ P-CANS Curvature Footer):} Local Ricci-flow and phase-coherence校验 invariants.
+  \item \textbf{Bytes \texttt{0..27} ($28\text{ B}$ Header):} \texttt{magic="QEG5"} ($4\text{ B}$), \texttt{dtype\_code=10} ($1\text{ B}$), packed scale/degree byte $(s \ll 4) \mid d$ with DRGFC Chebyshev degree $0 \le d \le 6$ ($1\text{ B}$), \texttt{bit\_budget} $\le 4{,}096\text{ bits}$ ($2\text{ B}$), 64-bit FNV-1a topological hash ($8\text{ B}$), 32-bit CRC32 ($4\text{ B}$), FP16 radial bounds $(r_{\min}, r_{\text{scale}}, z_{\text{scale}})$ ($6\text{ B}$), and 16-bit kernel tag ($2\text{ B}$).
+  \item \textbf{Bytes \texttt{28..51} ($24\text{ B}$ Vertex Golden Shell):} Signed \texttt{int8} pairs $(A_{v,i}, B_{v,i})$ for all $12$ icosahedral vertices, reconstructing $V_i = r_{\min} + z_{\text{scale}}(A_{v,i} + B_{v,i}\varphi)$.
+  \item \textbf{Bytes \texttt{52..111} ($60\text{ B}$ Edge Midpoint Golden Shell):} Signed \texttt{int8} pairs $(A_{e,j}, B_{e,j})$ across all $30$ icosahedral edges.
+  \item \textbf{Bytes \texttt{112..246} ($135\text{ B}$ Dodecahedral 720-State LUT):} $180$ packed 6-bit indices addressing the $720 = \lvert S_6 \rvert$ states of the 3D Golden Dodecahedron ($48 + 720 = 768$ structural invariants).
+  \item \textbf{Bytes \texttt{247..255} ($9\text{ B}$ P-CANS Curvature Footer):} Local Ricci-curvature parity bytes.
 \end{itemize}
 
 \begin{table}[t]
@@ -66,11 +66,11 @@ Each 256-byte cell layout comprises:
 \footnotesize
 \begin{tabular}{@{}llrr@{}}
 \toprule
-\textbf{Partition} & \textbf{Kernel IDs} & \textbf{Cells} & \textbf{Bytes} \\
+\textbf{Partition} & \textbf{Law Kernel IDs} & \textbf{Cells} & \textbf{Bytes} \\
 \midrule
 BAMA System Infrastructure & \texttt{K01}--\texttt{K53} & $53$ & $13{,}568\text{ B}$ \\
 Universal STEM Laws & \texttt{U01}--\texttt{U19} & $19$ & $4{,}864\text{ B}$ \\
-Perfect-Earth Bullseye Kernels & \texttt{KX01}--\texttt{KX08} & $8$ & $2{,}048\text{ B}$ \\
+Perfect-Earth Law Kernels & \texttt{KX01}--\texttt{KX08} & $8$ & $2{,}048\text{ B}$ \\
 \midrule
 \textbf{Total Cartridge Arena} & \textbf{All 80 Cells} & \textbf{80} & \textbf{20,480 B} \\
 \bottomrule
@@ -83,91 +83,52 @@ Given a candidate transit center $t_c$ and transit duration $D$ (in days) on a T
 \begin{equation}
   \max_{k} \left(t_{k+1} - t_k\right) \le 0.014\text{ d} \quad (\approx 20.16\text{ min}).
 \end{equation}
-Any window straddling a spacecraft downlink gap, reaction-wheel momentum dump, or cadence dropout $> 0.014\text{ d}$ is immediately vetoed. The window is partitioned into three disjoint zones:
+The window is partitioned into three disjoint zones:
 \begin{align}
   \mathcal{Z}_{\text{core}} &= \left\{ k \;\middle|\; \lvert t_k - t_c \rvert \le 0.40 D \right\}, \quad N_{\text{core}} = \lvert \mathcal{Z}_{\text{core}} \rvert \ge 12, \\
   \mathcal{Z}_{\text{flank}} &= \left\{ k \;\middle|\; 0.85 D \le \lvert t_k - t_c \rvert \le 2.20 D \right\}, \quad N_{\text{flank}} = \lvert \mathcal{Z}_{\text{flank}} \rvert \ge 40, \\
-  \mathcal{Z}_{\text{in/eg}} &= \left\{ k \;\middle|\; 0.40 D < \lvert t_k - t_c \rvert < 0.85 D \right\}.
+  \mathcal{Z}_{\text{in/eg}} &= \left\{ k \;\middle|\; 0.40 D < \lvert t_k - t_c \rvert < 0.85 D \right\},
 \end{align}
- furthermore, both left and right flanks must independently contain at least $15$ cadences ($N_{\text{flank},L} \ge 15$, $N_{\text{flank},R} \ge 15$). A local degree-2 polynomial baseline $B(t) = c_2 t^2 + c_1 t + c_0$ is fit via ordinary least squares \emph{exclusively} on $\mathcal{Z}_{\text{flank}}$ and bridged across $\mathcal{Z}_{\text{core}}$, yielding normalized residuals:
-\begin{equation}
-  r_k = \frac{f_k}{B(t_k)} - 1.0.
-\end{equation}
-Robust flank noise $\sigma_{\text{flank}}$ is estimated via the Gaussian-consistent Median Absolute Deviation:
-\begin{equation}
-  \sigma_{\text{flank}} = 1.4826 \cdot \operatorname{median}_{k \in \mathcal{Z}_{\text{flank}}}\! \left\lvert r_k - \operatorname{median}_{j \in \mathcal{Z}_{\text{flank}}}(r_j) \right\rvert.
-\end{equation}
-The detrended core transit depth and single-epoch signal-to-noise ratio are:
-\begin{equation}
-  d_{\text{PDC}} = -\operatorname{median}_{k \in \mathcal{Z}_{\text{core}}}(r_k) > 0, \qquad
-  \text{SNR}_{\text{epoch}} = \frac{d_{\text{PDC}} \sqrt{N_{\text{core}}}}{\sigma_{\text{flank}}} \ge 5.8.
-\end{equation}
-Across $M \ge 3$ independent transit epochs with individual ratios $\text{SNR}_m$, the quadrature multi-epoch signal-to-noise ratio must satisfy:
-\begin{equation}
-  \text{SNR}_{\text{comb}} = \sqrt{\sum_{m=1}^{M} \text{SNR}_m^2} \ge 9.5.
-\end{equation}
+with $N_{\text{flank},L} \ge 15$ and $N_{\text{flank},R} \ge 15$. A degree-2 polynomial baseline $B(t) = c_2 t^2 + c_1 t + c_0$ is fit on $\mathcal{Z}_{\text{flank}}$ and bridged across $\mathcal{Z}_{\text{core}}$, yielding residuals $r_k = f_k / B(t_k) - 1.0$, robust flank noise $\sigma_{\text{flank}} = 1.4826 \cdot \operatorname{MAD}(r_{\text{flank}})$, core depth $d_{\text{PDC}} = -\operatorname{median}(r_{\text{core}}) > 0$, single-epoch $\text{SNR}_{\text{epoch}} = d_{\text{PDC}}\sqrt{N_{\text{core}}}/\sigma_{\text{flank}} \ge 5.8$, and multi-epoch $\text{SNR}_{\text{comb}} = \sqrt{\sum \text{SNR}_m^2} \ge 9.5$.
 
-\subsection{Symmetry, Dipole, Dual-Aperture, Background \& Flicker Vetting}
-Every candidate epoch must pass five instrumental and astrophysical invariants implemented in \texttt{src/chord\_sieves\_kernel.py}:
-\begin{enumerate}
-  \item \textbf{Left/Right Core Half-Symmetry:} Let $d_L = -\operatorname{median}_{t_k \in [t_c - 0.40D, t_c)}(r_k)$ and $d_R = -\operatorname{median}_{t_k \in [t_c, t_c + 0.40D]}(r_k)$ with $d_L > 0, d_R > 0$. The core symmetry ratio must satisfy:
-  \begin{equation}
-    S_{\text{sym}} = \frac{\min(d_L, d_R)}{\max(d_L, d_R)} \ge 0.65.
-  \end{equation}
-  \item \textbf{Out-of-Transit Step/Dipole Veto:} Comparing inner flank segments $[-1.5D, -0.85D]$ and $[+0.85D, +1.5D]$, any step discontinuity exceeding $1.8\,\sigma_{\text{flank}}$ or $0.55\,d_{\text{PDC}}$ is rejected as a spacecraft attitude tweak or scattered-light ramp.
-  \item \textbf{Dual-Aperture ($\text{SAP}/\text{PDCSAP}$) Flux Ratio:} Evaluating the identical quadratic flank bridge on raw Simple Aperture Photometry (\texttt{SAP\_FLUX}) yields depth $d_{\text{SAP}}$, which must agree with $d_{\text{PDC}}$ within:
-  \begin{equation}
-    0.60 \le \frac{d_{\text{SAP}}}{d_{\text{PDC}}} \le 1.45.
-  \end{equation}
-  \item \textbf{Background Scattered-Light & Astrometric Centroid Gates:} The relative background shift between core and flank in \texttt{SAP\_BKG} must satisfy $\lvert \Delta\text{BKG} \rvert < 1.20\%$, and the astrometric center-of-light shift across $(\texttt{MOM\_CENTR1}, \texttt{MOM\_CENTR2})$ must satisfy:
-  \begin{equation}
-    \Delta_{\text{cen}} = \sqrt{(\Delta x_{\text{core}-\text{flank}})^2 + (\Delta y_{\text{core}-\text{flank}})^2} < 5.0\text{ mpix}.
-  \end{equation}
-  \item \textbf{In-Transit Stellar Granulation Flicker Ratio:} Point-to-point first-difference variance in the core versus flank is tracked via:
-  \begin{equation}
-    F_{\text{flicker}} = \left( \frac{\operatorname{MAD}(\Delta r_{\text{core}})}{\operatorname{MAD}(\Delta r_{\text{flank}})} \right)^2.
-  \end{equation}
-\end{enumerate}
+\subsection{Symmetry, Dipole, Dual-Aperture, Background, Flicker \& Stage 3.5 Vetting}
+Every candidate epoch in \texttt{src/chord\_sieves\_kernel.py} must satisfy: (1) Left/Right core half-symmetry $S_{\text{sym}} = \min(d_L, d_R)/\max(d_L, d_R) \ge 0.65$; (2) Out-of-transit step/dipole discontinuity $\le 1.8\,\sigma_{\text{flank}}$ and $\le 0.55\,d_{\text{PDC}}$; (3) Dual-aperture agreement $0.60 \le d_{\text{SAP}}/d_{\text{PDC}} \le 1.45$; (4) Background scattered-light shift $\lvert \Delta\text{BKG} \rvert < 1.20\%$ and centroid shift $\Delta_{\text{cen}} < 5.0\text{ mpix}$; and (5) Granulation flicker tracking $F_{\text{flicker}} = (\operatorname{MAD}(\Delta r_{\text{core}})/\operatorname{MAD}(\Delta r_{\text{flank}}))^2$. Candidates then enter \texttt{src/stage3\_5\_vetting\_gate.py}, which enforces: $\sigma_{\text{odd/even}} < 2.5$, $\text{SNR}_{\text{sec}}(\phi=0.5) < 3.0$, $V_{\text{shape}} < 0.85$, and $\sigma_{\text{centroid}} < 3.0$.
 
-\subsection{Stage 3.5 Four-Gate False-Positive Eliminator}
-Candidates surviving Stages 1--3 enter \texttt{src/stage3\_5\_vetting\_gate.py}, which enforces four hard vetoes against eclipsing binaries (EBs) and hierarchical blends:
-\begin{enumerate}
-  \item \textbf{Odd/Even Depth Consistency:} $\sigma_{\text{odd/even}} = \lvert d_{\text{odd}} - d_{\text{even}} \rvert / \sqrt{\sigma_{\text{odd}}^2 + \sigma_{\text{even}}^2} < 2.5$.
-  \item \textbf{Secondary Eclipse Veto at Phase $\phi = 0.5$:} $\text{SNR}_{\text{sec}}(\phi = 0.5 \pm 0.05) < 3.0$.
-  \item \textbf{Ingress/Egress V-Shape grazing Veto:} $V_{\text{shape}} = 1 - (T_{\text{flat}} / T_{\text{total}}) < 0.85$.
-  \item \textbf{Phase-Folded Astrometric Centroid Offset:} $\sigma_{\text{centroid}} < 3.0$.
-\end{enumerate}
-
-\section{Discovery Registry \& Habitability Results}
-Table~\ref{tab:registry} summarizes the live CHORD-SIEVES v2.4 discovery catalog (\texttt{registry/discoveries.json}, synced \texttt{2026-10-20T02:52:41Z}) and the Marked Follow-Up Registry (\texttt{registry/marked\_followup\_objects.json}). Across $390$ unique TIC stars, CHORD-SIEVES has verified $845$ primary exoplanet candidates ($809$ Category~A uncataloged discoveries, $25$ Category~B solved single-transit TOIs, and $11$ Category~C harmonic/ephemeris refinements).
+\section{Discovery Registry, Pipeline Priors \& Mutual Hill Stability Audit}
+Table~\ref{tab:registry} summarizes the CHORD-SIEVES v2.4 primary discovery catalog (\texttt{registry/discoveries.json}, $845$ records across \textbf{386 unique TIC host stars}) and the Marked Follow-Up Registry (\texttt{registry/marked\_followup\_objects.json}, $1{,}261$ objects, which adds $4$ marked-only TIC hosts \texttt{71013298}, \texttt{118914286}, \texttt{253864764}, and \texttt{332064670} for a union of \textbf{390 indexed TIC star systems}).
 
 \begin{table}[t]
 \centering
-\caption{CHORD-SIEVES v2.4 Primary Discovery Registry ($845$ Worlds) and Marked Follow-Up Catalog ($1{,}261$ Objects).}
+\caption{CHORD-SIEVES v2.4 Primary Discovery Registry ($845$ Records / $386$ Primary TIC Hosts) and Marked Registry ($1{,}261$ Objects / $390$ Union Hosts).}
 \label{tab:registry}
 \footnotesize
 \begin{tabular}{@{}lr@{}}
 \toprule
 \textbf{Catalog Metric / Partition} & \textbf{Verified Count} \\
 \midrule
-Total Indexed TIC Host Star Systems & $390$ \\
-\textbf{Total Verified Primary Catalog Worlds} & \textbf{845} \\
-\quad Category A (New Uncataloged Discoveries) & $809$ \\
-\quad Category B (Solved Single-Transit / Period-Fixed TOIs) & $25$ \\
-\quad Category C (Ephemeris Refinements \& Harmonic Controls) & $11$ \\
+Primary Catalog Unique TIC Host Stars & \textbf{386} \\
+Marked-Only TIC Host Stars (\texttt{71013298}, etc.) & $4$ \\
+Union Indexed TIC Host Star Systems & $390$ \\
+\textbf{Total Primary Catalog Records ($0.88\text{--}12.14\,R_\oplus$)} & \textbf{845} \\
+\quad Category A (\texttt{NEW\_OUTER} Uncataloged Records) & $809$ \\
+\quad Category B (\texttt{SOLVED\_TOI} Single-Transit / Period-Fixed) & $25$ \\
+\quad Category C (\texttt{REFINEMENT\_HARMONIC} Controls) & $11$ \\
+\quad Records in $0.75 \le R_p/R_\oplus \le 1.48$ (and $P > 60\text{ d}$) & $64$ ($44$) \\
 \midrule
-\textbf{Habitability Tiers (Primary 845-World Catalog)} & \\
-\quad Shirt-Sleeve Comfort Bullseye ($0^\circ\text{C} \le T_{\text{surf}} \le +35^\circ\text{C}$) & \textbf{600} \\
-\quad Extended Human-Survivable Band & \textbf{651} \\
-\quad Close-to-Perfect-Earth Spec Candidates & \textbf{339} \\
-\quad 7-Pillar Perfect-Earth Bullseye ($\ge 85.0\%$ in Primary 845) & \textbf{8} \\
+\textbf{Pipeline Temperature \& Rubric Cuts (Primary 845)} & \\
+\quad Shirt-Sleeve Temperature Cut ($0^\circ\text{C} \le T_{\text{surf}} \le +35^\circ\text{C}$) & \textbf{600} \\
+\quad \quad With Rocky Radius $R_p \le 1.60\,R_\oplus$ / $R_p > 1.60\,R_\oplus$ & $65$ / $535$ \\
+\quad Extended Survivable Temperature Band & $651$ \\
+\quad \texttt{CLOSE\_TO\_PERFECT\_EARTH\_SPEC} Records & $339$ \\
+\quad Rubric Score $\ge 85.0\%$ Records (Across 3 Host Stars) & \textbf{8} \\
+\quad Strict \texttt{KX02} Rocky Ceiling ($R_p \le 1.60\,R_\oplus, M_p \le 2.0\,M_\oplus$) & \textbf{6} \\
 \midrule
 \textbf{Marked Follow-Up Registry (\texttt{marked\_followup\_objects.json})} & \textbf{1,261} \\
-\quad \texttt{CLOSE\_TO\_PERFECT\_EARTH\_SPEC} & $339$ \\
 \quad \texttt{MARKED\_OFF\_SPEC\_FOR\_LATER\_FOLLOWUP} & $496$ \\
+\quad \texttt{CLOSE\_TO\_PERFECT\_EARTH\_SPEC} & $339$ \\
 \quad \texttt{ADDITIONAL\_VALID\_ORBIT\_ON\_MULTIPLANET\_HOST} & $301$ \\
 \quad \texttt{MARGINAL\_PERIODIC\_CANDIDATE\_6.5\_TO\_9.5\_SIGMA} & $107$ \\
-\quad \texttt{PERFECT\_EARTH\_BULLSEYE} ($8$ Primary $+ 4$ Outer Orbits) & $12$ \\
+\quad \texttt{PERFECT\_EARTH\_BULLSEYE} ($8$ at $\ge 85\%$ $+ 4$ Legacy $<85\%$) & $12$ \\
 \quad \texttt{VETTED\_TRANSIT\_EVENTS\_PENDING\_EPHEMERIS} & $6$ \\
 \bottomrule
 \end{tabular}
@@ -175,37 +136,49 @@ Total Indexed TIC Host Star Systems & $390$ \\
 
 \begin{table*}[t]
 \centering
-\caption{The 8 Primary-Catalog Perfect-Earth Bullseye Candidates (\texttt{KX01}--\texttt{KX08} in \texttt{bama\_exoplanet\_collective\_arena.bin}).}
+\caption{The 8 Primary-Catalog Candidate Solutions with Rubric Score $\ge 85.0\%$ Across 3 Host Stars (\texttt{TIC~271478281}, \texttt{TIC~283722336}, \texttt{TIC~320847025}). Multiple rows on the same host star have mutual Hill separations $\Delta a / R_H \in [0.084, 1.772] < 2\sqrt{3} \approx 3.46$ and therefore represent \textbf{competing 2-epoch period-alias solutions} for the same planet rather than coexisting orbits. Surface temperature $T_{\text{surf}}$, rotation $P_{\text{rot}}$, obliquity, and water fraction are analytic pipeline-model priors.}
 \label{tab:perfect8}
 \footnotesize
 \begin{tabular}{@{}llrrrrrrrrr@{}}
 \toprule
-\textbf{Kernel} & \textbf{Candidate ID} & \textbf{TIC ID} & $P$ \textbf{(d)} & $R_p$ $(R_\oplus)$ & $M_p$ $(M_\oplus)$ & $g$ $(g_\oplus)$ & $T_{\text{eff}}$ \textbf{(K)} & $T_{\text{surf}}$ $(^\circ\text{C} / ^\circ\text{F})$ & \textbf{Pillars} & \textbf{Score} \\
+\textbf{KX02 Tier} & \textbf{Candidate Solution ID} & \textbf{TIC ID} & $P$ \textbf{(d)} & $R_p$ $(R_\oplus)$ & $M_p$ $(M_\oplus)$ & $g$ $(g_\oplus)$ & $T_{\text{eff}}$ \textbf{(K)} & \textbf{Model} $T_{\text{surf}}$ $(^\circ\text{C} / ^\circ\text{F})$ & \textbf{Rubric} & \textbf{Score} \\
 \midrule
-\texttt{KX01} & \textbf{TIC-271478281-05} & 271478281 & 125.51444 & 1.10 & 1.39 & 1.15 & 4669 & $+22.1^\circ\text{C} / 71.8^\circ\text{F}$ & $7/7$ & \textbf{93.9\%} \\
-\texttt{KX02} & \textbf{TIC-283722336-06} & 283722336 & 162.90046 & 1.08 & 1.30 & 1.12 & 4884 & $+18.2^\circ\text{C} / 64.8^\circ\text{F}$ & $6/7$ & \textbf{89.2\%} \\
-\texttt{KX03} & \textbf{TIC-271478281-06} & 271478281 & 120.32215 & 1.14 & 1.58 & 1.21 & 4669 & $+26.2^\circ\text{C} / 79.2^\circ\text{F}$ & $7/7$ & \textbf{88.7\%} \\
-\texttt{KX04} & \textbf{TIC-283722336-04} & 283722336 & 160.30553 & 0.91 & 0.71 & 0.86 & 4884 & $+19.9^\circ\text{C} / 67.8^\circ\text{F}$ & $6/7$ & \textbf{88.6\%} \\
-\texttt{KX05} & \textbf{TIC-283722336-03} & 283722336 & 159.31632 & 0.88 & 0.63 & 0.81 & 4884 & $+20.4^\circ\text{C} / 68.7^\circ\text{F}$ & $6/7$ & \textbf{88.0\%} \\
-\texttt{KX06} & \textbf{TIC-283722336-05} & 283722336 & 160.54828 & 0.89 & 0.65 & 0.83 & 4884 & $+19.6^\circ\text{C} / 67.3^\circ\text{F}$ & $6/7$ & \textbf{87.9\%} \\
-\texttt{KX07} & \textbf{TIC-320847025-04} & 320847025 & 150.49919 & 1.26 & 2.10 & 1.32 & 4747 & $+20.1^\circ\text{C} / 68.2^\circ\text{F}$ & $6/7$ & \textbf{85.9\%} \\
-\texttt{KX08} & \textbf{TIC-271478281-03} & 271478281 & 128.96973 & 1.23 & 2.07 & 1.37 & 4669 & $+19.5^\circ\text{C} / 67.1^\circ\text{F}$ & $6/7$ & \textbf{85.8\%} \\
+\multicolumn{11}{@{}l}{\emph{Panel A: 6 Solutions Satisfying Law Kernel \texttt{KX02} Rocky Bulk Ceiling ($R_p \le 1.60\,R_\oplus$ and $M_p \le 2.0\,M_\oplus$)}} \\
+Strict \texttt{KX02} & \textbf{TIC-271478281-05} (Sol.\ A1) & 271478281 & 125.51444 & 1.10 & 1.39 & 1.15 & 4669 & $+22.1^\circ\text{C} / 71.8^\circ\text{F}$ & $7/7$ & \textbf{93.9\%} \\
+Strict \texttt{KX02} & \textbf{TIC-283722336-06} (Sol.\ B1) & 283722336 & 162.90046 & 1.08 & 1.30 & 1.12 & 4884 & $+18.2^\circ\text{C} / 64.8^\circ\text{F}$ & $6/7$ & \textbf{89.2\%} \\
+Strict \texttt{KX02} & \textbf{TIC-271478281-06} (Sol.\ A2) & 271478281 & 120.32215 & 1.14 & 1.58 & 1.21 & 4669 & $+26.2^\circ\text{C} / 79.2^\circ\text{F}$ & $7/7$ & \textbf{88.7\%} \\
+Strict \texttt{KX02} & \textbf{TIC-283722336-04} (Sol.\ B2) & 283722336 & 160.30553 & 0.91 & 0.71 & 0.86 & 4884 & $+19.9^\circ\text{C} / 67.8^\circ\text{F}$ & $6/7$ & \textbf{88.6\%} \\
+Strict \texttt{KX02} & \textbf{TIC-283722336-03} (Sol.\ B3) & 283722336 & 159.31632 & 0.88 & 0.63 & 0.81 & 4884 & $+20.4^\circ\text{C} / 68.7^\circ\text{F}$ & $6/7$ & \textbf{88.0\%} \\
+Strict \texttt{KX02} & \textbf{TIC-283722336-05} (Sol.\ B4) & 283722336 & 160.54828 & 0.89 & 0.65 & 0.83 & 4884 & $+19.6^\circ\text{C} / 67.3^\circ\text{F}$ & $6/7$ & \textbf{87.9\%} \\
+\midrule
+\multicolumn{11}{@{}l}{\emph{Panel B: 2 Solutions with Rubric Score $\ge 85.0\%$ Exceeding \texttt{KX02}'s $M_p \le 2.0\,M_\oplus$ Ceiling}} \\
+$M_p > 2.0\,M_\oplus$ & \textbf{TIC-320847025-04} (Host C1) & 320847025 & 150.49919 & 1.26 & 2.10 & 1.32 & 4747 & $+20.1^\circ\text{C} / 68.2^\circ\text{F}$ & $6/7^*$ & \textbf{85.9\%} \\
+$M_p > 2.0\,M_\oplus$ & \textbf{TIC-271478281-03} (Sol.\ A3) & 271478281 & 128.96973 & 1.23 & 2.07 & 1.37 & 4669 & $+19.5^\circ\text{C} / 67.1^\circ\text{F}$ & $6/7^*$ & \textbf{85.8\%} \\
 \bottomrule
 \end{tabular}
 \end{table*}
 
-Table~\ref{tab:perfect8} details the $8$ primary-catalog \textbf{Perfect-Earth Bullseye} worlds compiled into kernels \texttt{KX01}--\texttt{KX08}. For the flagship candidate \textbf{TIC~271478281.05} ($M_\star = 0.74\,M_\odot$, $R_\star = 0.72\,R_\odot$, $T_{\text{eff}} = 4669\text{ K}$, $P = 125.51444\text{ d}$), Kepler's Third Law yields semi-major axis:
+\subsection{Pipeline-Formula Priors vs.\ Direct Observables}
+It is essential to distinguish direct TESS photometric observables ($P, T_0, D, d_{\text{PDC}}, d_{\text{SAP}}, R_p/R_\star$) from analytic geophysical priors evaluated by \texttt{src/exoplanet\_deep\_profiler.py}:
+\begin{itemize}
+  \item \textbf{Model Surface Temperature:} Computed via $T_{\text{surf}}(^\circ\text{C}) = T_{\text{eq}}(A=0.25) \times (288/255) - 273.15$ (yielding $+22.1^\circ\text{C}$ from $T_{\text{eq}}(A=0.25) = 261.4\text{ K}$ for \texttt{TIC-271478281-05}).
+  \item \textbf{Model Rotation \& Obliquity Priors:} For non-tidally-locked K-dwarf orbits ($M_\star \ge 0.58\,M_\odot$, $P \in [38, 260]\text{ d}$), rotation and obliquity are analytic deterministic priors $P_{\text{rot}} = \operatorname{round}(24 \times \operatorname{round}(1.75 + 0.36\,\phi_{\text{mod}}, 2), 1)$ ($43.0\text{ h}$) and $\varepsilon = \operatorname{round}(14.0 + 2.4\sin(0.31 P + R_p), 1)$ ($15.8^\circ$), not photometric measurements.
+  \item \textbf{Marked-File Score Reconciliation:} While \texttt{marked\_followup\_objects.json} carries $12$ legacy \texttt{PERFECT\_EARTH\_BULLSEYE} bookmark strings, four of those entries (\texttt{TIC-271478281-04} at $84.9\%$, \texttt{TIC-320847025-03} at $84.4\%$, \texttt{TIC-193023697-05} at $84.2\%$ with $1.72\,R_\oplus / 5.62\,M_\oplus$, and \texttt{TIC-397362481-04} at $77.7\%$) have primary-catalog scores $< 85.0\%$ (\texttt{CLOSE\_TO\_PERFECT\_EARTH\_SPEC}); hence only the \textbf{8 primary records} in Table~\ref{tab:perfect8} meet the $\ge 85.0\%$ threshold.
+\end{itemize}
+
+\subsection{Mutual Hill Stability \& Competing Period-Alias Solutions}
+For the two-epoch flagship solution \textbf{TIC~271478281.05} (observed in TESS Sectors 67 and 94, $\text{SNR}_{\text{comb}} = 9.85$, depth $212.3\text{ ppm}$, host $M_\star = 0.74\,M_\odot$, $R_\star = 0.691\,R_\odot$, $T_{\text{eff}} = 4669\text{ K}$, $P = 125.51444\text{ d}$), Kepler's Third Law yields:
 \begin{equation}
-  a = \left( M_\star \left(\frac{P}{365.25636\text{ d}}\right)^2 \right)^{1/3} = \left( 0.74 \times (0.343634)^2 \right)^{1/3} = 0.4438\text{ AU},
+  a = \left( 0.74 \left(\frac{125.51444}{365.25636}\right)^2 \right)^{1/3} = 0.44375\text{ AU} \approx 0.4438\text{ AU}.
 \end{equation}
-placing the $1.10\,R_\oplus$ terrestrial world squarely inside the conservative liquid-water habitable zone with an estimated mean surface temperature of $+22.1^\circ\text{C}$ ($+71.8^\circ\text{F}$) and surface gravity $1.15\,g_\oplus$.
+Evaluating the mutual Hill radius $R_H = \frac{a_1 + a_2}{2}\left(\frac{m_1 + m_2}{3 M_\star}\right)^{1/3}$ between adjacent candidate periods on \texttt{TIC~283722336} ($M_\star = 0.80\,M_\odot$: $\Delta a / R_H = 0.347, 0.084, 0.720$ for \texttt{.03--.04}, \texttt{.04--.05}, \texttt{.05--.06}) and \texttt{TIC~271478281} ($M_\star = 0.74\,M_\odot$: $\Delta a / R_H = 1.772, 1.082, 0.390$ for \texttt{.06--.05}, \texttt{.05--.03}, \texttt{.03--.04}) shows that all adjacent pairs lie inside Gladman's circular coplanar stability limit $2\sqrt{3} \approx 3.46\,R_H$. Consequently, the multiple rows on \texttt{TIC~271478281} and \texttt{TIC~283722336} represent \textbf{competing two-epoch period-alias linkages} of the same transiting planet on each star rather than simultaneously coexisting multi-planet orbits.
 
 \section{Longitudinal Ephemeris Self-Audit Ledger (v2.4.0)}
-Unlike static catalog papers, CHORD-SIEVES operates a continuous forward-prediction self-audit loop (\textbf{Self-Audit Ledger v2.4.0}, audited \texttt{2026-10-20 02:52:42 UTC}) paired with the \textbf{Visual Verification Mandate v2.1.0} ($232/232$ visual transit maps verified, including $31$ legacy telemetry variance fixes and $9$ closed-loop multi-iteration refinements) and the \textbf{TESS Catchup Matrix} ($19{,}608$ sector-planet rows across $1{,}169$ recorded discovery windows, including $1{,}092$ TESS lead windows across $253$ lead planets).
+In continuous forward-prediction auditing across \textbf{4,957 scheduled transit windows} (\textbf{Self-Audit Ledger v2.4.0}, audited \texttt{2026-10-20 02:52:42 UTC}), CHORD-SIEVES achieved \textbf{2,170 / 4,957 (43.78\%) on-time \texttt{CORRECT} recovery} across all scheduled windows, while across the $2{,}592$ observationally covered windows ($2{,}170\text{ \texttt{CORRECT}} + 422\text{ \texttt{SHIFTED (TTV)}}$ across $429$ recalibrated records), zero candidates ($0\text{ \texttt{WRONG}}$, $100.0\%$ covered-window non-retraction rate across $843$ verified records) were disproven.
 
 \begin{table}[h]
 \centering
-\caption{Self-Audit Ledger v2.4.0 Window Accounting ($4{,}957$ Total Predicted Transit Windows).}
+\caption{Self-Audit Ledger v2.4.0 Window Accounting ($4{,}957$ Total Scheduled Transit Windows).}
 \label{tab:audit}
 \footnotesize
 \begin{tabular}{@{}lrr@{}}
@@ -218,15 +191,13 @@ Unlike static catalog papers, CHORD-SIEVES operates a continuous forward-predict
 \texttt{UNABLE TO VERIFY} (Camera Footprint / Sector Gap) & $2{,}326$ & $46.92\%$ \\
 \texttt{PENDING\_DATA\_RELEASE} (Awaiting MAST Ingest) & $39$ & $0.79\%$ \\
 \midrule
-\textbf{Total Audited Ephemeris Windows} & \textbf{4,957} & \textbf{100.00\%} \\
+\textbf{Total Scheduled Ephemeris Windows} & \textbf{4,957} & \textbf{100.00\%} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Across all $2{,}592$ observationally covered windows ($2{,}170\text{ \texttt{CORRECT}} + 422\text{ \texttt{SHIFTED (TTV)}}$ across $429$ recalibrated multi-planet TTV worlds), \textbf{zero candidates ($0\text{ \texttt{WRONG}}$) failed transit recovery}, establishing a $100.0\%$ longitudinal ephemeris precision rate across $843$ multi-epoch verified worlds.
-
 \section{Conclusion \& Public Verifier SDK}
-CHORD-SIEVES v2.4 demonstrates that coupling a mathematically rigorous 3-Zone Local Quadratic Flank Bridge with an 80-kernel BAMA $\mathbb{Z}[\varphi]$ Golden Dodecahedral cartridge enables deterministic, zero-hallucination recovery of long-period temperate terrestrial exoplanets directly from raw TESS photometry on consumer edge hardware. All $80$ compiled \texttt{QEG5} cells ($20{,}480\text{ B}$) and the 4-gate verification suite (\texttt{verify\_chord\_sieves\_public\_cartridge.py}) are publicly available at \url{https://chord-sieves-report.vercel.app} and \url{https://github.com/MetaphyKing/chord-sieves-report/releases/tag/v2.4.0}.
+CHORD-SIEVES v2.4 and its 80-kernel BAMA $\mathbb{Z}[\varphi]$ cartridge ($20{,}480\text{ B}$) provide a transparent, self-auditing architecture for long-period TESS transit discovery. Future TESS Extended Mission coverage or targeted ground-based photometric monitoring is prioritized to break the two-epoch period-alias degeneracy on \texttt{TIC~271478281} and \texttt{TIC~283722336} prior to spectroscopic characterization. The Read-Only Public Verifier SDK (\texttt{verify\_chord\_sieves\_public\_cartridge.py}, including cell-byte $\mathbb{Z}[\varphi]$ verification, synthetic formula replay, and direct \texttt{discoveries.json} recount) is available at \url{https://chord-sieves-report.vercel.app} and \url{https://github.com/MetaphyKing/chord-sieves-report/releases/tag/v2.4.0}.
 
 \begin{thebibliography}{9}
 \bibitem{ricker2015tess}
@@ -235,6 +206,8 @@ G.~R. Ricker \emph{et al.}, ``Transiting Exoplanet Survey Satellite (TESS),'' \e
 G.~Kov\'{a}cs, S.~Zucker, and T.~Mazeh, ``A box-fitting algorithm in the search for periodic transits,'' \emph{Astron.\ Astrophys.}, vol.~391, pp.~369--377, 2002.
 \bibitem{hippke2019tls}
 M.~Hippke and R.~Heller, ``Optimized transit detection algorithm to search for periodic transits of small planets,'' \emph{Astron.\ Astrophys.}, vol.~623, p.~A39, 2019.
+\bibitem{gladman1993hill}
+B.~Gladman, ``Dynamics of systems of two close planets,'' \emph{Icarus}, vol.~106, no.~1, pp.~247--263, 1993.
 \bibitem{smith2026bama}
 L.~Smith, ``BAMA v3.1: Zero-Drift Golden-Field Cortical Cartridges ($\mathbb{Z}[\varphi]$) and 11-Tier Holographic Memory Routing,'' U.S.\ Patent Application No.\ 64/180,009, Oct.\ 2026.
 \end{thebibliography}
