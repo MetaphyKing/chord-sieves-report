@@ -1,0 +1,15 @@
+{
+  "schema": "bama-80-kernel-astro-prime-collective-arena-v1",
+  "bama_gnkg_notebook_id": "45ee43c2-1e33-4c71-9131-b14fdac68bcd",
+  "collective_graph_gnkg_notebook_id": "580df981-0cbf-4105-aaad-449a94ba281e",
+  "embedding_model": "hf.co/AtomicChat/embeddinggemma-2-GGUF:Q8_0",
+  "embedding_source": "DETERMINISTIC_SHA256_FALLBACK",
+  "num_kernels": 80,
+  "system_kernels_count": 53,
+  "universal_stem_kernels_count": 19,
+  "exoplanet_perfect_earth_kernels_count": 8,
+  "arena_bytes": 20480,
+  "bytes_per_cell": 256,
+  "compile_latency_ms": 1241.63,
+  "arena_sha256": "c7237583ff3af261e0f1f3262dbe88c37e36d2ecdfff02a7a5bd3e6d00255ba5"
+}

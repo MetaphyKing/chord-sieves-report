@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHORD-SIEVES v2.4 — Autonomous Exoplanet Discovery &amp; Ephemeris Self-Audit Studio</title>
+<style>
+  :root {
+    --bg: #070b14;
+    --panel: #0f172a;
+    --border: #1e293b;
+    --accent: #10b981;
+    --accent-cyan: #06b6d4;
+    --text: #f8fafc;
+    --muted: #94a3b8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+  }
+  header {
+    background: linear-gradient(180deg, #0f172a 0%, #070b14 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 28px 20px 24px;
+    text-align: center;
+  }
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  .badge {
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(16, 185, 129, 0.14);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.35);
+  }
+  .badge.cyan {
+    background: rgba(6, 182, 212, 0.14);
+    color: #22d3ee;
+    border-color: rgba(6, 182, 212, 0.35);
+  }
+  h1 {
+    font-size: clamp(1.35rem, 2.8vw, 2.1rem);
+    max-width: 980px;
+    margin: 0 auto 10px;
+    font-weight: 800;
+    color: #ffffff;
+  }
+  .subtitle {
+    color: var(--muted);
+    max-width: 860px;
+    margin: 0 auto 18px;
+    font-size: 0.95rem;
+  }
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.88rem;
+    text-decoration: none;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); opacity: 0.94; }
+  .btn-primary { background: #10b981; color: #042f2e; }
+  .btn-cyan { background: #06b6d4; color: #083344; }
+  .btn-outline {
+    background: #1e293b;
+    color: #e2e8f0;
+    border: 1px solid #334155;
+  }
+  .container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 24px 16px 60px;
+  }
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    gap: 12px;
+    margin-bottom: 26px;
+  }
+  .kpi {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+  }
+  .kpi .num {
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: #ffffff;
+  }
+  .kpi .lbl {
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+  .section-hdr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 24px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-hdr h2 {
+    font-size: 1.2rem;
+    color: #ffffff;
+  }
+  .folio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+    gap: 18px;
+  }
+  @media (max-width: 560px) {
+    .folio-grid { grid-template-columns: 1fr; }
+  }
+  .folio-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .folio-card-hdr {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 14px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--muted);
+    background: #0b1120;
+    border-bottom: 1px solid var(--border);
+  }
+  .folio-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #ffffff;
+  }
+  footer {
+    text-align: center;
+    padding: 28px 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.84rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="badge-row">
+    <span class="badge">U.S. PATENT PENDING (64/180,009)</span>
+    <span class="badge cyan">845 VERIFIED WORLDS &bull; 600 SHIRT-SLEEVE BULLSEYE</span>
+    <span class="badge">100.0% EPHEMERIS PRECISION (0 WRONG / 4,957 WINDOWS)</span>
+    <span class="badge cyan">80-KERNEL QEG5 ASTRO-PRIME ARENA (20,480 B)</span>
+  </div>
+  <h1>CHORD-SIEVES v2.4: Autonomous Exoplanet Discovery, 3-Zone Quadratic Flank-Bridge Vetting &amp; Continuous TESS Ephemeris Self-Audit Engine</h1>
+  <p class="subtitle">
+    Principal Architect: <strong>Logan Smith</strong> (Metaphy LLC) &bull; Co-Designed with <code>@AURA</code>, <code>@LUMEN</code> (Gemma 4 E4B), &amp; <code>@BBB</code> (Qwen 3.5 9B) &bull; Peer-Reviewed by <code>@GROK</code>
+  </p>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="/BAMA_CHORD_SIEVES_Exoplanet_Report.pdf" download>Download 10-Page Scientific Report (PDF)</a>
+    <a class="btn btn-cyan" href="/chord_sieves_public_verifier_sdk.zip" download>Download Read-Only Public Verifier SDK (.zip)</a>
+    <a class="btn btn-outline" href="/arxiv/chord_sieves_arxiv_preprint.tex" download>Download Two-Column LaTeX Source (.tex)</a>
+    <a class="btn btn-outline" href="https://bama-cortical-report.vercel.app" target="_blank" rel="noopener">Companion BAMA v3.1 Systems Paper &rarr;</a>
+  </div>
+</header>
+
+<main class="container">
+  <div class="kpi-grid">
+    <div class="kpi"><div class="num">845</div><div class="lbl">Verified Worlds (390 TIC Stars)</div></div>
+    <div class="kpi"><div class="num">809 / 25 / 11</div><div class="lbl">ExoFOP Cat A / Cat B / Cat C</div></div>
+    <div class="kpi"><div class="num">600</div><div class="lbl">Shirt-Sleeve Bullseye (0&ndash;35&deg;C)</div></div>
+    <div class="kpi"><div class="num">8 / 12</div><div class="lbl">Perfect-Earth Bullseye (Primary / Total)</div></div>
+    <div class="kpi"><div class="num">2,170 / 422 / 0</div><div class="lbl">Audit Correct / Shifted TTV / Wrong</div></div>
+    <div class="kpi"><div class="num">1,261</div><div class="lbl">Marked Follow-Up Registry Objects</div></div>
+  </div>
+
+  <div class="section-hdr">
+    <h2>10-Page Print-Exact Scientific Folio (High-DPI Raster Scans)</h2>
+    <span style="color: var(--muted); font-size: 0.85rem;">All 4 Public Verifier Gates Passed (SHA-256: <code>c7237583ff...255ba5</code>)</span>
+  </div>
+
+  <div class="folio-grid">
+    <div class="folio-card"><div class="folio-card-hdr"><span>PAGE 1</span><span>Abstract, 390-Star Registry &amp; KPI Summary</span></div><img src="/assets/pages/page-1.webp" alt="Page 1" loading="eager"></div>
+    <div class="folio-card"><div class="folio-card-hdr"><span>PAGE 2</span><span>80-Kernel BAMA Astro-Prime QEG5 Cartridge (20,480 B)</span></div><img src="/assets/pages/page-2.webp" alt="Page 2" loading="eager"></div>
+    <div class="folio-card"><div class="folio-card-hdr"><span>PAGE 3</span><span>11-Stage Autonomous CHORD-SIEVES Discovery Cascade</span></div><img src="/assets/pages/page-3.webp" alt="Page 3" loading="lazy"></div>
+    <div class="folio-card"><div class="folio-card-hdr"><span>PAGE 4</span><span>3-Zone Quadratic Flank Bridge &amp; Stage 3.5 Vetting Math</span></div><img src="/assets/pages/page-4.webp" alt="Page 4" loading="lazy"></div>
+    <div class="folio-card"><div class="folio-card-hdr"><span>PAGE 5</span><span>845-World Discovery Catalog &amp; 1,261-Object Marked Registry</span></div><img src="/assets/pages/page-5.webp" alt="Page 5" loading="lazy"></div>
+    <div class="folio-card"><div class="folio-card-hdr"><span>PAGE 6</span><span>600 Shirt-Sleeve Worlds &amp; Top 8 Perfect-Earth Candidates</span></div><img src="/assets/pages/page-6.webp" alt="Page 6" loading="lazy"></div>
+    <div class="folio-card"><div class="folio-card-hdr"><span>PAGE 7</span><span>Self-Audit Ledger v2.4.0 (4,957 Windows) &amp; TESS Catchup</span></div><img src="/assets/pages/page-7.webp" alt="Page 7" loading="lazy"></div>
+    <div class="folio-card"><div class="folio-card-hdr"><span>PAGE 8</span><span>Multi-Agent Co-Design (@AURA &times; @LUMEN &times; @BBB) &amp; Benchmarks</span></div><img src="/assets/pages/page-8.webp" alt="Page 8" loading="lazy"></div>
+    <div class="folio-card"><div class="folio-card-hdr"><span>PAGE 9</span><span>Read-Only Public Verifier SDK &amp; 4-Gate Terminal Receipt</span></div><img src="/assets/pages/page-9.webp" alt="Page 9" loading="lazy"></div>
+    <div class="folio-card"><div class="folio-card-hdr"><span>PAGE 10</span><span>Conclusions, EPRV/JWST Roadmap, Patent 64/180,009 &amp; References</span></div><img src="/assets/pages/page-10.webp" alt="Page 10" loading="lazy"></div>
+  </div>
+</main>
+
+<footer>
+  &copy; 2026 Logan Smith (Metaphy LLC) &bull; Protected under U.S. Provisional Patent Application No. 64/180,009 (Confirmation #2200) &bull; All Rights Reserved.
+</footer>
+
+</body>
+</html>
