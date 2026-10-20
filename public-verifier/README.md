@@ -1,7 +1,7 @@
 # CHORD-SIEVES v2.4 — Read-Only Public Verifier SDK (`20,480 B` Astro-Prime Cartridge)
 
 **U.S. Patent Application No. 64/180,009 (Patent Pending)**  
-**Author:** Logan Smith (Metaphy LLC) — Co-Designed by `@AURA` (Gemini 2.5 Pro), `@LUMEN` (Gemma 4 E4B), and `@BBB` (Qwen 3.5 9B), Peer-Reviewed by `@GROK` (xAI Grok)
+**Author:** Logan Smith (Metaphy LLC) — Co-Designed by `@AURA` (Gemini 4 Argon), `@LUMEN` (Gemma 4 E4B), and `@BBB` (Qwen 3.5 9B), Peer-Reviewed by `@GROK` (xAI Grok)
 
 ## What Is Included in This SDK
 This package provides a zero-IP-leakage, read-only public verifier for the **CHORD-SIEVES v2.4 Autonomous Exoplanet Discovery & Ephemeris Self-Audit Engine** and its **80-Kernel BAMA Astro-Prime Collective Arena**:
