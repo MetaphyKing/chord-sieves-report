@@ -125,7 +125,7 @@ def main() -> None:
     hill_tic_271478281 = {
         "06_vs_05": round(mutual_hill_delta(0.74, 120.32215, 1.58, 125.51444, 1.39), 3),
         "05_vs_03": round(mutual_hill_delta(0.74, 125.51444, 1.39, 128.96973, 2.07), 3),
-        "03_vs_04": round(mutual_hill_delta(0.74, 128.96973, 2.07, 130.32997, 1.25), 3),
+        "03_vs_04": round(mutual_hill_delta(0.74, 128.96973, 2.07, 130.32997, 2.21), 3),
     }
 
     # Save compact ground-truth index of discoveries.json for direct inspection by Gate 4

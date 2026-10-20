@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-10-20T15:19:47Z",
+  "timestamp_utc": "2026-10-20T15:32:19Z",
   "uspto_provisional_application_no": "64/180,009",
   "uspto_confirmation_no": 2200,
   "arena_file": "bama_exoplanet_collective_arena.bin",
@@ -58,7 +58,7 @@
     "tic_271478281_adjacent_separations_rh": {
       "06_vs_05": 1.772,
       "05_vs_03": 1.082,
-      "03_vs_04": 0.424
+      "03_vs_04": 0.39
     },
     "physical_interpretation": "Competing 2-epoch period-alias solutions for the same transiting planet per host star (3 distinct host systems: TIC 271478281, TIC 283722336, TIC 320847025)."
   },
@@ -251,9 +251,9 @@
     "tic_271478281_05_m_star_msun": 0.74,
     "tic_271478281_05_keplerian_a_au_5dp": 0.44375,
     "tic_271478281_05_keplerian_a_au_4dp": 0.4438,
-    "lumen_gemma4_e4b_latency_s": 3.3,
+    "lumen_gemma4_e4b_latency_s": 3.97,
     "lumen_gemma4_e4b_excerpt": "Here is the concise 4-bullet confirmation of the revised CHORD-SIEVES v2.4 ground-truth numbers:\n\n*   TIC 271478281.05: M\\_star = 0.74 M\\_Sun, R\\_star = 0.691 R\\_Sun, P = 125.51444 d, semi-major axis a = 0.4438 AU.\n*   Primary catalog contains 845 records (809 NEW\\_OUTER + 25 SOLVED\\_TOI + 11 REFINEMENT\\_HARMONIC) across 386 unique TIC host stars (390 union TIC stars).\n*   Self-Audit Ledger shows 2,170 / 4,957 (43.78%) on-time CORRECT windows, 422 SHIFTED (TTV), and 0 WRONG across 2,592 covered ",
-    "bbb_qwen3_5_9b_latency_s": 5.15,
+    "bbb_qwen3_5_9b_latency_s": 5.09,
     "bbb_qwen3_5_9b_excerpt": "*   **TIC 271478281.05**: Confirmed with $M_{\\text{star}} = 0.74\\,M_{\\odot}$, $R_{\\text{star}} = 0.691\\,R_{\\odot}$, $P = 125.51444\\,\\text{d}$, and semi-major axis $a = 0.44375\\,\\text{AU}$ (rounding to 0.4438 AU).\n*   **Primary Catalog**: Verified containing 845 records (809 NEW_OUTER + 25 SOLVED_TOI + 11 REFINEMENT_HARMONIC) spanning 386 unique TIC hosts, expanding to 390 union TIC stars when including 4 marked-only hosts (71013298, 118914286, 253864670/253864764, and 332064670).\n*   **Self-Audi"
   }
 }

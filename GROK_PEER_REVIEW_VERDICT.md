@@ -1,5 +1,40 @@
 # CHORD-SIEVES v2.4 — independent peer-review verdict
 
+## Round 2 — sign-off
+
+**Reviewer:** Grok  
+**Date:** 2026-10-20  
+**Verdict:** SIGN-OFF. All seven Round-1 close conditions are met in the tex, the folio, the public verifier, and the receipt’s structured counts.  
+**Snapshot unchanged:** `discoveries.json` `updated_utc` 2026-10-20T02:52:41Z. Receipt rewritten `2026-10-20T15:19:47Z`.
+
+This pass re-read `arxiv\chord_sieves_arxiv_preprint.tex`, `pdf-source.html`, `public-verifier\verify_chord_sieves_public_cartridge.py`, and `public-verifier\CHORD_SIEVES_CODESIGN_AND_BENCHMARK_RECEIPT.json`, then recounted `C:\dev\chord-sieves-exoplanet-hunter\registry\discoveries.json` (845 records, 386 distinct `tic_id`, union 390 with marked-only TIC ids 71013298, 118914286, 253864764, 332064670). The public verifier was run in this review and exited 0. Gate 4’s printed source was that `discoveries.json` path. Light curves were not re-reduced. No manuscript file was edited. This verdict was not posted to the mesh.
+
+| Close condition | Result | Evidence |
+|---|---|---|
+| 1. Crossing pairs relabeled; EPRV/JWST request removed | Met | Tex §Mutual Hill Stability and folio §6.2 call the adjacent rows on TIC 271478281 and TIC 283722336 competing two-epoch period-alias linkages, and place the eight ≥85% rows on three hosts (271478281, 283722336, 320847025). Catalog Hill separations, using stored masses and \(M_\oplus/M_\odot = 3.0034893488507934\times10^{-6}\), are 0.347, 0.084, 0.720 and 1.772, 1.082, 0.390. The folio’s close recommends photometry before radial-velocity or spectroscopic time. No immediate EPRV or JWST request remains. |
+| 2. 386 primary hosts; 390 = union | Met | Abstract, registry table, and folio KPIs print 845 records / 386 TIC hosts. 390 is defined as that set plus the four marked-only TIC ids above. Recount matches. |
+| 3. Eight primary rows at ≥85%; four legacy labels distinguished | Met | Exactly eight primary rows have `overall_score_pct` ≥ 85 and `bookmark_status` `PERFECT_EARTH_BULLSEYE`. The four legacy marked labels are printed at their primary scores: TIC-271478281-04 84.9, TIC-320847025-03 84.4, TIC-193023697-05 84.2 (1.72 \(R_\oplus\), 5.62 \(M_\oplus\)), TIC-397362481-04 77.7, each `CLOSE_TO_PERFECT_EARTH_SPEC`. |
+| 4. Flagship \(R_\star = 0.691\,R_\odot\), \(a = 0.44375\) AU | Met | Stored `r_star_rsun` is 0.691 and `m_star_msun` is 0.74. \((0.74 \times (125.51444/365.25636)^2)^{1/3} = 0.44375287\) AU. Tex, folio, and receipt field `tic_271478281_05_keplerian_a_au_5dp` print 0.44375. The old 0.72 \(R_\odot\) sentence is gone. |
+| 5. Audit lead is 2,170 / 4,957 (43.78%), with the 2,592-window zero-`WRONG` rate | Met | Tex audit section, folio §7 heading, abstract audit sentence, and the audit KPI lead with 2,170 / 4,957 (43.78%) and keep 0 `WRONG` on 2,592 covered windows in the same statement. Recount of `window_label_counts` is 2170 + 422 + 0 + 2326 + 39 = 4957. |
+| 6. `KX01`–`KX08` off planet rows; `KX02` ceiling applied; priors named | Met | Planet rows are TIC solution ids. The tier column is Strict `KX02` versus \(M_p > 2.0\,M_\oplus\). Six rows have \(R_p \le 1.60\) and \(M_p \le 2.0\). The two rows above the ceiling are TIC-320847025-04 at 2.10 \(M_\oplus\) and TIC-271478281-03 at 2.07 \(M_\oplus\). `KX01`–`KX08` remain only as cartridge law-kernel ids. Folio §6 and the tex table caption state that \(T_{\mathrm{surf}}\), rotation, obliquity, and water coverage are pipeline priors. |
+| 7. Gate 4 recounts `discoveries.json`; Gate 3 named; Gate 2 on cell bytes | Met | Gate 4 builds the record list from `discoveries.json` when that file exists and asserts `len(unique primary tic_id) == receipt primary host count == 386`. This run took that branch. Gate 3’s docstring, comment, and log line say Synthetic Formula Replay. Gate 2 unpacks int8 \((A,B)\) from bytes 28..111 of each cell and evaluates \(\lvert(A\varphi + B\varphi^2) - (B + (A+B)\varphi)\rvert\). This run reported max residual \(8.88\times10^{-16}\). |
+
+### Residuals that do not reopen the seven holds
+
+The receipt field `dynamical_hill_stability_audit.tic_271478281_adjacent_separations_rh.03_vs_04` is **0.424**. That value is reproduced only by assigning TIC-271478281-04 a mass of 1.25 \(M_\oplus\). The catalog mass is **2.21 \(M_\oplus\)**, and the separation is **0.390**, which is what the tex and the folio print. Both numbers are far inside 3.46 mutual Hill radii, so the competing-alias label stands. The quoted BBB excerpt also writes the marked-only id as `253864670/253864764`; the structured list in the same receipt is the correct id 253864764.
+
+Gate 2 reads the cell bytes, and the checked reduction is still \(|z_{\mathrm{scale}} \cdot B \cdot (\varphi^2 - \varphi - 1)|\). Any finite int8 payload passes. The gate does not authenticate the kernel coefficients.
+
+TIC 320847025 contributes one ≥85% table row. Its catalog neighbors are also inside the Hill limit: `.03`–`.04` at 1.256 and `.04`–`.05` at 0.915. The folio does not present that host as a packed multi-planet system awaiting EPRV or JWST.
+
+`public-verifier\README.md`, which was not one of the four named close-condition files, still says the 845 candidates sit in 390 TIC star systems. The tex, folio, and receipt distinguish 386 from the union of 390.
+
+### Verifier run
+
+`python public-verifier\verify_chord_sieves_public_cartridge.py` exited 0 on 2026-10-20. Arena digest `c7237583ff3af261e0f1f3262dbe88c37e36d2ecdfff02a7a5bd3e6d00255ba5`. Gate 3 synthetic SNR 48.75. Gate 4 source path `C:\dev\chord-sieves-exoplanet-hunter\registry\discoveries.json`. The fail-closed host-count assert is in the source. This review did not inject a wrong host count to trip it.
+
+## Round 1 — prior HOLD (archived)
+
 **Reviewer:** Grok  
 **Date:** 2026-10-20  
 **Verdict:** HOLD. The published integers are real counts in the snapshot files. They do not support treating the eight-world table as coexisting planets, or requesting EPRV or JWST time on those pairs.  
